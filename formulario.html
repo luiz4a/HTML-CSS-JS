@@ -1,24 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro Na esacola My little Pony</title>
+    <title>Cadastro na Escola My Little Pony 🦄</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
-<body> 
-    <img src= "luiza.png" alt="logo" class="logo">
+<body>
+     
+    <img src="luiza.png" alt="Logo da escola" class="logo">
+    
     <div class="container">
-        <h3 class= "titulo">  Formulário  </h3> 
-        <p></p>
-        <input type="text" id="nome" placeholder="Nome">
-        <p></p>
-        <input type="Email" id=" email"placeholder="Email">
-        <p></p>
-        <input type="password" id="senha"placeholder="Senha">
-        <p></p>
-        <button type = "button"> Cadastrar</button>
+        <h3 class="titulo">Formulário de Cadastro</h3> 
+
+        <form>
+            <input type="text" id="nome" placeholder="Nome completo" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="senha" placeholder="Senha" required>
+            <button type="submit">Cadastrar</button>
+        </form>
+        <p class="texto">Já tem uma conta? <a href="login.html">Faça login</a></p>
+        <button class="toggle-theme" onclick="toggleDarkMode()"></button>
 
     </div>    
 </body>
+
+<script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+  
 </html>
