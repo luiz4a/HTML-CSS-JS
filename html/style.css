@@ -1,0 +1,193 @@
+/* corpo*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #410392, #f8f0ff);
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('pony.png'); 
+    background-size: cover;
+    background-position: center;
+    opacity: 0.08;
+    pointer-events: none; /* Permite clicar nos campos acima */
+}
+
+
+.logo {
+    width: 250px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    text-align: center;
+}
+
+.titulo {
+    font-size: 24px;
+    margin-bottom: 25px;
+    color: #7b2cbf;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:100% ;
+    flex: 1;
+    gap: 1px;
+
+    gap: 15px;
+    width: 100%;
+}
+
+input, button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+input {
+    border: 1px solid #a766fd;
+    outline: none;
+}
+
+input:focus {
+    border-color: #5f0c8f;
+    box-shadow: 0 0 5px #d3bdf0;
+}
+
+button {
+    background-color: #9450cc;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #4a0d80;
+    transform: scale(1.05);
+}
+
+@media (max-width: 400px) {
+    .container {
+        width: 90%;
+        padding: 25px;
+    }
+
+    .logo {
+        width: 180px;
+    }
+}
+
+.toggle-theme {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #eeeeff;
+    color: #5a189a;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.toggle-theme:hover {
+    background-color: #ddd;
+}
+
+/* Modo escuro */
+body.dark-mode {
+    background: linear-gradient(135deg, #1a1a2e, #2e144e);
+    color: #f1f1f1;
+}
+
+body.dark-mode .container {
+    background-color: #2b2b3f;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .titulo {
+    color: #c77dff;
+}
+
+body.dark-mode input {
+    background-color: #3e3e5e;
+    color: #fff;
+    border: 1px solid #7b2cbf;
+}
+
+body.dark-mode button {
+    background-color: #7b2cbf;
+    color: #fff;
+}
+
+body.dark-mode button:hover {
+    background-color: #5a189a;
+}
+.toggle-theme {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #fff;
+    border-radius: 50%; 
+    width: 40px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+    z-index: 10;
+}
+
+.toggle-theme:hover {
+    background-color: #ddd;
+}
+
+.toggle-theme::before {
+    content: "🌙";  
+    font-size: 22px;
+    transition: 0.3s;
+}
+
+body.dark-mode .toggle-theme::before {
+    content: "☀️";  
+}
