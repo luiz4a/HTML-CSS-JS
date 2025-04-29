@@ -1,0 +1,197 @@
+:root {
+    --bg-gradient-light: linear-gradient(
+        rgba(40, 78, 167, 0.6),
+        rgba(255, 77, 77, 0.4),
+        rgba(255, 255, 255, 0.3)
+    );
+    --bg-dark: linear-gradient(135deg, #1a1a2e, #2e144e);
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: var(--bg-gradient-light), url('bahia.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #da2c2c;
+    transition: background 0.5s, color 0.5s;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+body.dark-mode {
+    background: linear-gradient(rgba(26, 26, 46, 0.8), rgba(46, 20, 78, 0.8)), url('bahia.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #f1f1f1;
+}
+
+
+body.dark-mode .container {
+    background-color: #1f31cc;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode input {
+    background-color: #3f3fdf;
+    color: #fff;
+    border: 1px solid #ffffff;
+}
+
+body.dark-mode button {
+    background-color: #e90404;
+    color: #fff;
+}
+
+body.dark-mode button:hover {
+    background-color: #7c0b0b;
+}
+
+.logo {
+    width: 100px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 40px 20px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 15px rgba(187, 33, 33, 0.1);
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    transition: background-color 0.5s;
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #85a5ee;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+}
+
+input, button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+input {
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #f00a0a;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border: 2px solid transparent;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #d81919;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(148, 25, 20, 0.5);
+}
+
+.link-usuarios {
+    margin-top: 25px;
+    text-decoration: none;
+    color: #007bff;
+    font-size: 14px;
+}
+
+.link-usuarios:hover {
+    text-decoration: none;
+    text-shadow: 0 0 2px #0056b3;
+}
+
+.mensagem {
+    position: fixed;
+    top: 20px;
+    right: -300px;
+    padding: 15px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0px 0px 10px rgba(170, 29, 29, 0.1);
+    transition: right 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    opacity: 0;
+    cursor: pointer;
+    max-width: 300px;
+    z-index: 1000;
+}
+
+.mensagem.sucesso {
+    background-color: #28a745;
+}
+
+.mensagem.visivel {
+    right: 20px;
+    opacity: 1;
+}
+
+.oculto {
+    display: none;
+}
+
+.toggle-theme {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(70, 12, 12, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+    z-index: 10;
+}
+
+.toggle-theme:hover {
+    background-color: #ddd;
+}
+
+.toggle-theme::before {
+    content: "🌙";  
+    font-size: 22px;
+    transition: 0.3s;
+}
+
+body.dark-mode .toggle-theme::before {
+    content: "☀️";  
+}

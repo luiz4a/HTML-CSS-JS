@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de usuários</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img src="ECBahia.png" alt="EC Bahia" class="logo">
+    <button class="toggle-theme" onclick="document.body.classList.toggle('dark-mode')"></button>
+    
+    <div class="container">
+        
+        <h2 class="font-change">Cadastro de Sócios</p>
+            
+
+        <form id="cadastroForm">
+            <input type="text" id="nome" placeholder="Nome" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="senha" placeholder="Senha" required>
+            <button type="button" onclick="cadastrarUsuario()">Cadastrar</button>
+        </form>
+        
+        
+        
+        <a href="usuarios.html" class="link-usuarios">Ver usuarios cadastrados</a>
+    </div>
+    
+    <div id="mensagem" class="mensagem oculto" onclick="fecharMensagem()"></div>
+    
+   
+
+    <script src="script.js"></script>
+
+</body>
+</html>
