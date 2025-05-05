@@ -2,7 +2,8 @@
     --bg-gradient-light: linear-gradient(
         rgba(0, 56, 168, 0.8),
         rgba(255, 255, 255, 0.3),
-        rgba(5, 255, 201, 0.6)    );
+        rgba(5, 255, 201, 0.6)
+    );
     --bg-gradient-dark: linear-gradient(135deg, #e0f7f1, #d6fff2);
     --text-light: #147a4b;
     --text-dark: #0a3d2e;
@@ -47,11 +48,6 @@ body {
     position: relative;
 }
 
-body.dark-mode {
-    background: linear-gradient(rgba(26, 26, 46, 0.8), rgba(46, 20, 78, 0.8)), url('foto-2.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: var(--text-color-dark);
-}
 body.dark-mode {
     background: var(--bg-gradient-dark), url('foto-2.jpg') no-repeat center center fixed;
     background-size: cover;
