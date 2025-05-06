@@ -1,0 +1,92 @@
+.App {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  min-height: 100vh;
+  background: url('eren-yeager-3840x2160-10408.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #f0f0f0; /* cor clara para contraste com o fundo */
+  font-size: 18px; /* tamanho padrão aumentado */
+}
+
+.App h1 {
+  color: #ffffff;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.App h2 {
+  color: #e5e0f1;
+  font-size: 32px; /* aumentado de 28px para 32px */
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.App h2:first-of-type {
+  font-size: 36px;
+} 
+
+.App input[type="text"] {
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+  font-size: 18px;
+  border-radius: 4px;
+}
+
+.App button {
+  background-color: #c40000; /* vermelho */
+  color: rgb(250, 250, 250);
+  padding: 12px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.App button:hover {
+  background-color: #a00000;
+}
+
+.App hr {
+  border: 1px solid #f8f8ff;
+  margin: 20px 0;
+  width: 80%;
+}
+
+.App ol {
+  list-style-type: decimal;
+  padding-left: 20px;
+  width: 80%;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.App ol li {
+  padding: 8px 0;
+  border-bottom: 1px solid #f30707;
+  font-size: 22px; /* adicionado ou ajustado */
+}
+
+.App ol li:last-child {
+  border-bottom: none;
+}
+
+.DIGUE {
+  width: 600px; /* ou outro valor que preferir */
+  height: auto;
+  display: block;
+  margin: 0 auto; /* centraliza horizontalmente */
+  margin-top: 10px;
+}
+
+.App h2:first-of-type {
+  font-size: 36px;
+}
+
+.App ol li {
+  font-size: 22px;
+}
